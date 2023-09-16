@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;700&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+}
+
+.login{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.loginLeft{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top left, #0096FA, #42536B);
+}
+
+.loginLeft__img{
+    width: 70%;
+    margin-bottom: 25px;
+}
+.loginLeft__title{
+    color: #fff;
+    font-size: 36px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.loginLeft__text{
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    text-align: center;
+}
+
+.loginRight{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 70%;
+}
+
+.form__image{
+    width: 300px;
+    display: block;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+.form__title{
+    font-family: Roboto;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form__label{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    left: 5px;
+    user-select: none;
+    color: #636262;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    transition: transform .5s ease;
+}
+
+.fa-solid{
+    margin-right: 5px;
+    color: #636262;
+}
+
+.form__control{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.form__input{
+    position: absolute;
+    width: 100%;
+    padding: 15px 7px 5px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    font-size: 18px;
+}
+
+.form__input:focus{
+    outline: none;
+}
+
+.form__input:focus + .form__label, .form__input:not(:placeholder-shown) + .form__label{
+    transform: translateY(-15px) scale(.9);
+    color: #0096FA;
+    transform-origin: top left;
+}
+
+.form__input:focus + .form__label .fa-solid{
+    color: #0096FA;
+}
+
+[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #0096FA;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+[type="submit"]::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.1);
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path .5s ease;
+}
+
+[type="submit"]:hover::after{
+    clip-path: circle(100.0% at 50% 50%);
+    }
+
+
+
+.form__remember{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.rememberCheck__label{
+    color: #a9a4a4;
+    font-size: 14px;
+}
+
+.rememberLink{
+    font-size: 14px;
+    color: #0096FA;
+}
+
+.form__createAccount, .form__buttonGoogle{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: 2px solid #0096FA;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: Roboto;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0096FA;
+}
+
+.form__textGoogle{
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Open Sans';
+    font-size: 15px;
+}
+
+.form__textGoogle span{
+    color: #0096FA;
+}
+
+.form__buttonGoogle{
+    border: 1px solid #636262;
+    color: #636262;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+ 
+}
+
+.form__imgGoogle{
+    width: 20px;
+    margin-right: 15px;
+    z-index: 100;
+}
+
+.form__buttonGoogle::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #0096FA;
+    opacity: .1;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path .5s ease;
+
+}
+
+.form__buttonGoogle:hover::before{
+    clip-path: circle(100.0% at 50% 50%);
+    }
+
+
+    @media(max-width:991px){
+        .loginLeft, .loginRight{
+            width: 50%;
+        }
+    }
+
+    @media(max-width:576px){
+        .loginLeft{
+            display: none;
+        }
+        .loginRight{
+            width: 100%;
+        }
+    }

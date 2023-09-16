@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <div class="login">
+      <div class="loginLeft">
+        <img src="img/logoWhite.png" class="loginLeft__img" alt="Logo" />
+        <h1 class="loginLeft__title">Bienvenido a Blog Tecnológico</h1>
+        <p class="loginLeft__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing.
+        </p>
+      </div>
+      <div class="loginRight">
+        <form class="form" autocomplete="off">
+          <a href="index.html" class="form__imageLink">
+            <img src="img/logoBlog.png" class="form__image" alt="Logo" />
+          </a>
+          <h2 class="form__title">Iniciar sesión</h2>
+
+          <div class="form__control">
+            <input
+              class="form__input"
+              type="email"
+              id="email"
+              placeholder=" "
+            />
+            <label for="email" class="form__label">
+              <i class="fa-solid fa-envelope"></i>Email</label
+            >
+          </div>
+          <div class="form__control">
+            <input
+              class="form__input"
+              type="password"
+              id="password"
+              placeholder=" "
+            />
+            <label for="password" class="form__label"
+              ><i class="fa-solid fa-lock"></i>Contraseña</label
+            >
+          </div>
+          <div class="form__control">
+            <button type="submit">Iniciar sesión</button>
+          </div>
+          <div class="form__remember">
+            <div class="rememberCheck">
+              <input
+                type="checkbox"
+                class="rememberCheck__input"
+                id="remember"
+              />
+              <label for="remember" class="rememberCheck__label"
+                >Mostrar Contraseña</label
+              >
+            </div>
+            <a href="" class="rememberLink">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <a href="#" class="form__createAccount"> Crear Cuenta</a>
+          <p class="form__textGoogle">
+            <span> Crear cuenta </span> o iniciar sesión con
+          </p>
+          <a href="#" class="form__buttonGoogle">
+            <img src="img/google.png" class="form__imgGoogle" alt="" /> Google
+          </a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
