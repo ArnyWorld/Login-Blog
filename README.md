@@ -1,3 +1,3 @@
 ## Blog Tecnológico
 
-!(Blog Tecnológico)[./img/blogTech.jpg]
+![Blog Tecnológico](./img/blogTech.jpg)
